@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	__int16 a, b;
+	cout << "a:" << endl;
+	cin >> a;
+   
+
+	__asm
+	{
+		mov ax, a
+		rcr ax, 2; ax = 0001h, CF = 0
+	 mov b, ax
+
+	}
+	cout << "b = " << b << endl;
+
+	system("pause");
+	return 0;
+}
